@@ -17,9 +17,10 @@ local Update = function(self, event, unit)
 
 	-- check unit auras for vengeance
 	local hasAura = false
+	local spellID
 	local i = 1
 	while true do
-		local name, rank, icon, count, dispelType, duration, expires, caster, isStealable, shouldConsolidate, spellID, ea1, ea2, ea3, ea4, ea5 = UnitAura(self.unit, i)
+		_, _, _, _, _, _, _, _, _, _, spellID = UnitAura(self.unit, i)
 
 		-- no more auras, quit out of the loop
 		if not spellID then break end
