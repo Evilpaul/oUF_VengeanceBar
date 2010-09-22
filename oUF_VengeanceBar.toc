@@ -1,0 +1,8 @@
+## Interface: 40000
+## Title: oUF Vengeance Bar
+## Notes: Adds a status bar showing current vengeance value.
+## Author: EvilPaul
+## Version: 0.1
+## Dependencies: oUF
+
+oUF_VengeanceBar.lua
