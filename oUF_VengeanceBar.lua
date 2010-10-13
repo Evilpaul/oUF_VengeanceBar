@@ -1,6 +1,3 @@
-local CC = select(4, GetBuildInfo()) == 4e4
-if(not CC) then return end
-
 local _, ns = ...
 local oUF = ns.oUF or oUF
 assert(oUF, 'VengeanceBar was unable to locate oUF install')
