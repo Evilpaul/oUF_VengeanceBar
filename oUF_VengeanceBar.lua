@@ -14,13 +14,9 @@ local Update = function(self, event, unit)
 
 	-- check unit auras for vengeance
 	local hasAura = false
-	local spellID
 	local i = 1
-	while true do
-		_, _, _, _, _, _, _, _, _, _, spellID = UnitAura(self.unit, i)
-
-		-- no more auras, quit out of the loop
-		if not spellID then break end
+	repeat
+		local _, _, _, _, _, _, _, _, _, _, spellID = UnitAura(self.unit, i)
 
 		if spellID == VENGEANCE_ID then
 			hasAura = true
@@ -28,7 +24,7 @@ local Update = function(self, event, unit)
 		end
 
 		i = i + 1
-	end
+	until not spellID
 
 	if(hasAura) then
 		-- get vengeance stack value
