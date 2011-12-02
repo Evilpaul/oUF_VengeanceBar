@@ -1,4 +1,4 @@
-## Interface: 43000
+## Interface: 40300
 ## Title: oUF Vengeance Bar
 ## Notes: Adds a status bar showing current vengeance value.
 ## Author: EvilPaul
